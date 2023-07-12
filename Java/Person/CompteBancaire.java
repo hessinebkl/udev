@@ -39,13 +39,6 @@ public class CompteBancaire {
         this.sold = this.sold - montant;
     }
 
-    public void acheterVoiture(float prix){ 
-        if (this.sold>prix)
-        debiter(prix);
-        else if (sold<prix)
-        System.out.println("Votre sold est insuffisant a acheter cette voiture");
-    }
-
     //afficherDetails
     public void afficherDetails(){
         System.out.println("Titulaire de compte: "+this.titulaire);
