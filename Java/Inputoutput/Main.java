@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args){
         try {
             FileWriter writer = new FileWriter("lahoucine.txt");
-            writer.write("Hello, my aname is Lahoucine");
+            writer.write("Hello, my name is Lahoucine");
             writer.close();
 
             FileReader reader = new FileReader("lahoucine.txt");
