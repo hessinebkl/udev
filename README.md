@@ -1,4 +1,4 @@
 # UDEV
-udev exercices for java only for now!
+udev Java exercices 20231
 
 by Lahoucine BOUKAL
