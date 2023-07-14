@@ -49,7 +49,10 @@ public class Livre implements Imprimable{
 
     @Override
     public void imprimer() {
-        System.out.println("Livre est Imprimé");
+
+        System.out.println("Titre: "+this.titre);
+
+
     }
 
 }
