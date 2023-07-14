@@ -26,6 +26,9 @@ public class Adherent {
     public String getnumeroDetelephone(){
         return this.numeroDetelephone;
     }
+     public List<String> getLivres(){
+        return this.livresEmpruntes;
+    }
 
     //SETTERS
 
@@ -42,7 +45,12 @@ public class Adherent {
     //Methods
 
     public void emprunterLivre(Livre livre){
-        livresEmpruntes.add(livre.getTitre());
+        if(livre.getestEmprunte()==true){
+            System.out.println("ce livre "+livre.getTitre() +" est deja emprunte");
+        }
+        else{
+            livre.emprunterLivre();
+        }
     }
 
     public void retournerLivre(Livre livre){
