@@ -16,6 +16,4 @@ public class LivreAudio extends Livre{
         return this.duree;
     }
 
-
-    
 }
