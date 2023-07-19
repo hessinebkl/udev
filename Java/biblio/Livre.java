@@ -40,18 +40,18 @@ public class Livre implements Imprimable{
     }
 
     // Method Emprunter Livre
-    public void emprunter(){
+    public void Emprunter(){
         this.estEmprunte = true;
     }
 
     // Method REtourner Livre
-    public void retourner(){
+    public void Retourner(){
         this.estEmprunte = false;
     }
 
     // Method Imprimer
     @Override
-    public void imprimer() {
+    public void Imprimer() {
         System.out.println("Impression: ");
         System.out.println("Titre: "+this.titre);
         System.out.println("Auteur: "+this.auteur);
