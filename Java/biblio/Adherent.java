@@ -52,7 +52,7 @@ public class Adherent {
             " > parce que il est deja emprunté par un autre adherent");
             }
             else{
-            livre.emprunter();
+            livre.Emprunter();
             livresEmpruntes.add(livre);
             System.out.println("le livre < "+livre.getTitre()+" > a été Emprunte par "+getNom());
                 }
@@ -66,7 +66,7 @@ public class Adherent {
         else if(livresEmpruntes.contains(livre)==false)
             System.out.println("le livre < "+livre.getTitre() +" > na jamais été Emprunter par "+getNom());
         else{
-            livre.retourner();
+            livre.Retourner();
             livresEmpruntes.remove(livre);
             System.out.println("le livre < "+livre.getTitre() +" > a été retourner par "+getNom());
         }           
