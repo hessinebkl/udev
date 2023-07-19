@@ -21,33 +21,31 @@ public class Main {
 
     // LES TEST :
 
-        // Test Emrunter Livre Normal
+        // Test Emrunter Livre
         System.out.println(" ");
-        A1.emprunterLivre(L5);
-        A1.retournerLivre(L5);
+        A1.emprunterLivre(L1);
+        A1.retournerLivre(L1);
 
-        // Test Emprunter Livre Audio
+        // Test Emprunter un Livre Audio
         System.out.println(" ");
         A1.emprunterLivre(L2);
         A1.retournerLivre(L2);
 
         // Imprimer un Livre
         System.out.println(" ");
-        System.out.println("Impression: ");
         L1.imprimer();
 
-        // Test de routourner le livre sans lui Emprenter
-        System.out.println(" ");
-        A2.retournerLivre(L5);
-
-        // Test de Emprenter un livre qui est deja emprunter 
+        // Test de Emprenter un livre deja emprunter par un autre Adherent
         System.out.println("  ");
-        A1.emprunterLivre(L5);
-        A2.emprunterLivre(L5);
-        A1.retournerLivre(L5); 
+        A1.emprunterLivre(L4);
+        A2.emprunterLivre(L4);
+        A1.retournerLivre(L4); 
 
-        // Test de routourne un livre par un Adherent qui na pas Emprenter ce livre
-        //  mais le Livre est Emprunter par un auter Adherent 
+        // Test de routourner un livre qui n'a jamais été emprunté
+        System.out.println(" ");
+        A2.retournerLivre(L3);
+
+        // Test de routourne un livre déja Emprunter par un auter Adherent
         System.out.println("    ");
         A1.emprunterLivre(L5);
         A2.retournerLivre(L5);
@@ -55,8 +53,8 @@ public class Main {
 
         // Test de Emprenter plus de deux livres
         System.out.println("    ");
-        A1.emprunterLivre(L5);
-        A1.emprunterLivre(L4);
+        A1.emprunterLivre(L1);
+        A1.emprunterLivre(L2);
         A1.emprunterLivre(L3);
 
 
