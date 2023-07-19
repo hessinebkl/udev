@@ -1,5 +1,5 @@
-package biblio;
+package Biblio;
 
 public interface Imprimable {
-    public void imprimer();
+    public void Imprimer();
 }
