@@ -9,6 +9,7 @@ public class Adherent {
     private int numeroDetelephone;
     private List<Livre> livresEmpruntes = new ArrayList<Livre>();
 
+    // Constructeur
     Adherent(String nom,String adress, int numeroDetelephone){
         this.nom=nom;
         this.adress=adress;
@@ -16,7 +17,6 @@ public class Adherent {
     }
 
     //GETTERS
-
     public String getNom(){
         return this.nom;
     }
@@ -31,7 +31,6 @@ public class Adherent {
     }
 
     //SETTERS
-
     public void setNom(String nom){
         this.nom=nom;
     }
@@ -42,35 +41,34 @@ public class Adherent {
         this.numeroDetelephone=numeroDetelephone;
     }
 
-    //Methods
-
+    //Method Empruter Livre
     public void emprunterLivre(Livre livre){
-        if(livresEmpruntes.size()>1){
+        if(livresEmpruntes.size()>=2){
             System.out.println(getNom()+" Ne peut Emprunter plus de DEUX livres");
         }
         else{
             if(livre.getestEmprunte()){
-            System.out.println(getNom()+" ne peut pas emprunter le livre: "+livre.getTitre() +" parce que il est deja emprunté par un autre adherent");
+            System.out.println(getNom()+" ne peut pas emprunter le livre < "+livre.getTitre() +
+            " > parce que il est deja emprunté par un autre adherent");
             }
             else{
-            livre.emprunterLivre();
+            livre.emprunter();
             livresEmpruntes.add(livre);
-            System.out.println("le livre < "+livre.getTitre()+" > a été Emprunte par: "+getNom());
+            System.out.println("le livre < "+livre.getTitre()+" > a été Emprunte par "+getNom());
                 }
-        }
-        
+        }       
     }
 
+    // Method Retourner Livre
     public void retournerLivre(Livre livre){
         if(livre.getestEmprunte()==false)
-            System.out.println("le livre: < "+livre.getTitre() +" > na jamais été Emprunter par "+getNom());
+            System.out.println("le livre < "+livre.getTitre() +" > na jamais été Emprunter par "+getNom());
         else if(livresEmpruntes.contains(livre)==false)
-            System.out.println("le livre: < "+livre.getTitre() +" > na jamais été Emprunter par "+getNom());
+            System.out.println("le livre < "+livre.getTitre() +" > na jamais été Emprunter par "+getNom());
         else{
-            livre.retournerLivre();
+            livre.retourner();
             livresEmpruntes.remove(livre);
-            System.out.println("le livre: < "+livre.getTitre() +" > a été retourner par "+getNom());
+            System.out.println("le livre < "+livre.getTitre() +" > a été retourner par "+getNom());
         }           
     }
-
 }
