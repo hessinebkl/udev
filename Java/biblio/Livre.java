@@ -49,6 +49,7 @@ public class Livre implements Imprimable{
 
     @Override
     public void imprimer() {
+        System.out.println("Impression: ");
         System.out.println("Titre: "+this.titre);
         System.out.println("Auteur: "+this.auteur);
         System.out.println("Année de Publication: "+this.anneeDePublication);
