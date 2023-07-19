@@ -6,6 +6,7 @@ public class Livre implements Imprimable{
     private int anneeDePublication;
     private boolean estEmprunte;
 
+    // Constructeur
     Livre(String titre, String auteur, int anneeDePublication, boolean estEmprunte){
         this.titre=titre;
         this.auteur=auteur;
@@ -38,15 +39,17 @@ public class Livre implements Imprimable{
         return this.estEmprunte;
     }
 
-    
-    public void emprunterLivre(){
+    // Method Emprunter Livre
+    public void emprunter(){
         this.estEmprunte = true;
     }
 
-    public void retournerLivre(){
+    // Method REtourner Livre
+    public void retourner(){
         this.estEmprunte = false;
     }
 
+    // Method Imprimer
     @Override
     public void imprimer() {
         System.out.println("Impression: ");
