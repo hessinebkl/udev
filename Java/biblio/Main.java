@@ -33,7 +33,7 @@ public class Main {
 
         // Imprimer un Livre
         System.out.println(" ");
-        L1.imprimer();
+        L1.Imprimer();
 
         // Test de Emprenter un livre deja emprunter par un autre Adherent
         System.out.println("  ");
