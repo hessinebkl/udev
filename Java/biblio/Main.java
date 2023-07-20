@@ -21,41 +21,48 @@ public class Main {
 
     // LES TEST :
 
-        // Test Emrunter Livre
+        // Test Emprunter Livre
         System.out.println(" ");
         A1.emprunterLivre(L1);
         A1.retournerLivre(L1);
+        System.out.println(" ");
 
         // Test Emprunter un Livre Audio
         System.out.println(" ");
         A1.emprunterLivre(L2);
         A1.retournerLivre(L2);
+        System.out.println(" ");
 
         // Imprimer un Livre
-        System.out.println(" ");
+        System.out.println("  ");
         L1.Imprimer();
+        System.out.println("  ");
 
         // Test de Emprenter un livre deja emprunter par un autre Adherent
-        System.out.println("  ");
+        System.out.println(" ");
         A1.emprunterLivre(L4);
         A2.emprunterLivre(L4);
-        A1.retournerLivre(L4); 
+        A1.retournerLivre(L4);
+        System.out.println(" ");
 
         // Test de routourner un livre qui n'a jamais été emprunté
         System.out.println(" ");
         A2.retournerLivre(L3);
+        System.out.println(" ");
 
         // Test de routourne un livre déja Emprunter par un auter Adherent
-        System.out.println("    ");
+        System.out.println(" ");
         A1.emprunterLivre(L5);
         A2.retournerLivre(L5);
         A1.retournerLivre(L5);
+        System.out.println(" ");
 
         // Test de Emprenter plus de deux livres
-        System.out.println("    ");
+        System.out.println(" ");
         A1.emprunterLivre(L1);
         A1.emprunterLivre(L2);
         A1.emprunterLivre(L3);
+        System.out.println(" ");
 
 
     }
