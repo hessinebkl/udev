@@ -44,7 +44,7 @@ public class Livre implements Imprimable{
         this.estEmprunte = true;
     }
 
-    // Method REtourner Livre
+    // Method Retourner Livre
     public void Retourner(){
         this.estEmprunte = false;
     }
