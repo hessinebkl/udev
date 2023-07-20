@@ -26,7 +26,7 @@ public class Adherent {
     public int getnumeroDetelephone(){
         return this.numeroDetelephone;
     }
-     public List<Livre> getLivres(){
+    public List<Livre> getLivres(){
         return this.livresEmpruntes;
     }
 
@@ -41,13 +41,13 @@ public class Adherent {
         this.numeroDetelephone=numeroDetelephone;
     }
 
-    //Method Empruter Livre
+    //Method Emprunter Livre
     public void emprunterLivre(Livre livre){
         if(livresEmpruntes.size()>=2){
             System.out.println(getNom()+" Ne peut Emprunter plus de DEUX livres");
         }
         else{
-            if(livre.getestEmprunte()){
+            if(livre.getestEmprunter()){
             System.out.println(getNom()+" ne peut pas emprunter le livre < "+livre.getTitre() +
             " > parce que il est deja emprunté par un autre adherent");
             }
@@ -56,19 +56,17 @@ public class Adherent {
             livresEmpruntes.add(livre);
             System.out.println("le livre < "+livre.getTitre()+" > a été Emprunte par "+getNom());
                 }
-        }       
+        }
     }
 
     // Method Retourner Livre
     public void retournerLivre(Livre livre){
-        if(livre.getestEmprunte()==false)
-            System.out.println("le livre < "+livre.getTitre() +" > na jamais été Emprunter par "+getNom());
-        else if(livresEmpruntes.contains(livre)==false)
-            System.out.println("le livre < "+livre.getTitre() +" > na jamais été Emprunter par "+getNom());
+        if(livresEmpruntes.contains(livre)==false)
+            System.out.println("le livre < "+livre.getTitre() +" > na pas été Emprunter par "+getNom());
         else{
             livre.Retourner();
             livresEmpruntes.remove(livre);
             System.out.println("le livre < "+livre.getTitre() +" > a été retourner par "+getNom());
-        }           
+        }
     }
 }
